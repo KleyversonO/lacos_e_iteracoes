@@ -9,12 +9,46 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <h1> Exemplo de laço de repretição FOR, em javascript</h1>
-    <script>
-        const frutas = ["maçã", "banana", "laranja", "uva", "melancia"];
-for (let i = 0; i < frutas.length; i++) {
-    console.log("eu gosto de " + frutas [i]);
-}
-    </script>
+    <form name="selectForm">
+        <p>
+          <label for="tipoMusica"
+            >Escolha alguns tipos de música, em seguida, clique no botão
+            abaixo:</label
+          >
+          <select id="tipoMusica" name="tipoMusica" multiple="multiple">
+            <option selected="selected">R&B</option>
+            <option>Jazz</option>
+            <option>Blues</option>
+            <option>New Age</option>
+            <option>Classico</option>
+            <option>Ópera</option>
+            <option>Funk</option>
+            <option>r&b/ soul</option>
+            <option>Pop</option>
+            <option>Pagode</option>
+          </select>
+        </p>
+        <p><input id="btn" type="button" value="Quantos foram selecionados?" /></p>
+      </form>
+      
+      <script>
+        function howMany(selectObject) {
+          var numeroSelecionadas = 0;
+          for (var i = 0; i < selectObject.options.length; i++) {
+            if (selectObject.options[i].selected) {
+              numeroSelecionadas++;
+            }
+          }
+          return numeroSelecionadas;
+        }
+      
+        var btn = document.getElementById("btn");
+        btn.addEventListener("click", function () {
+          alert(
+            "Total de opções selecionadas: " +
+              howMany(document.selectForm.tipoMusica),
+          );
+        });
+      </script>
 </body>
 </html>
