@@ -12,15 +12,10 @@ O site foi criado durante as aulas de Web design 1 instruidas pelo professor Leo
 ## Tecnologias utilizadas
  
 ```HTML 5```
-
 ```CSS 3```
-
 ```Java Script```
-
 ```Github```
-
 ```VsCode```
-
 ```Microsoft Teams```
  
 ##
